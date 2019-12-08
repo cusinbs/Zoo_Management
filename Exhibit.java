@@ -3,7 +3,7 @@ package ZooManagement;
 import java.util.ArrayList;
 
 abstract class Exhibit { //
-	protected final int EXHIBIT_SIZE = 4; //maximum number of animal in an exhibit
+	protected final int CAPACITY = 4; //maximum number of animal in an exhibit
 	protected ArrayList<Animal> animals = new ArrayList<Animal>(); //the array list that will hold all the animals
 	protected String exhibitType; //type of the environment
 	
@@ -16,7 +16,7 @@ abstract class Exhibit { //
 	}
 	
 	private boolean validate(Animal animal) {
-		if(animals.size() ==  EXHIBIT_SIZE) {
+		if(animals.size() ==  CAPACITY) {
 			System.out.println("The exhibit already have 4 animals!");
 			return false;
 		}
